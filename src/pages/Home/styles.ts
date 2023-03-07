@@ -2,11 +2,13 @@ import styled from 'styled-components';
 
 const HomeContainer = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
   background: -webkit-linear-gradient(to top, #38393a, #0e0e0e);
   background: linear-gradient(to top, #38393a, #0e0e0e);
   background: -olinear-gradient(to top, #38393a, #0e0e0e); 
+  overflow: hidden;
 `
 
 const Stars = styled.div`
@@ -57,10 +59,34 @@ const SearchContainer = styled.section`
   width: 100%;
 `
 
+const CastContainer = styled.div`
+  height: 100%;
+  overflow-y: auto;
+  z-index: 2;
+  
+  ul {
+    height: 100%;
+    display: flex;
+    flex-direction: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+  }
+  
+  li {
+    list-style-type: none;
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+  }
+`
+
 export default {
   HomeContainer,
   Stars,
   Header,
   Logo,
-  SearchContainer
+  SearchContainer,
+  CastContainer
 }

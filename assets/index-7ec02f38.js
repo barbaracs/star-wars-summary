@@ -70,7 +70,7 @@ Error generating stack: `+i.message+`
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
-`,Q0={Loader:W0},K0=()=>je(Q0.Loader,{}),Y0=on.input`
+`,Q0={Loader:W0},K0=()=>je(Q0.Loader,{"data-testid":"loader"}),Y0=on.input`
   width: 60%;
   height: 50px;
   display: inline-flex;
@@ -165,4 +165,4 @@ Error generating stack: `+i.message+`
     padding: 10px;
     font-size: 24px;
   }
-`,kn={HomeContainer:c1,Stars:f1,Header:d1,Logo:p1,SearchContainer:h1,CastContainer:m1},y1=()=>{const[e,t]=Ue.useState([]),[n,r]=Ue.useState(""),[o,i]=Ue.useState(!1);return Ue.useEffect(()=>{n&&(i(!0),_c.get("/person",{params:{search:n}}).then(l=>{l&&t(l.data.data),i(!1)}))},[n]),Ue.useEffect(()=>{n||(i(!0),_c.get("/people").then(l=>{t(l.data.data),i(!1)}))},[n]),Zs(kn.HomeContainer,{children:[je(kn.Stars,{}),Zs(kn.Header,{children:[je(kn.Logo,{}),je(kn.SearchContainer,{children:je(X0,{value:n,setValue:r})})]}),je(kn.CastContainer,{children:je("ul",{children:e.length>0&&e.map((l,u)=>je("li",{children:l},`${u}-${l}`))})}),o&&je(K0,{})]})};function v1(){return je(Fp,{children:je(y1,{})})}zl.createRoot(document.getElementById("root")).render(je(Yr.StrictMode,{children:je(v1,{})}));
+`,kn={HomeContainer:c1,Stars:f1,Header:d1,Logo:p1,SearchContainer:h1,CastContainer:m1},y1=()=>{const[e,t]=Ue.useState([]),[n,r]=Ue.useState(""),[o,i]=Ue.useState(!1);return Ue.useEffect(()=>{n&&(i(!0),_c.get("/person",{params:{search:n}}).then(l=>{l&&t(l.data.data),i(!1)}))},[n]),Ue.useEffect(()=>{n||(i(!0),_c.get("/people").then(l=>{t(l.data.data),i(!1)}))},[n]),Zs(kn.HomeContainer,{children:[je(kn.Stars,{}),Zs(kn.Header,{"data-testid":"header",children:[je(kn.Logo,{}),je(kn.SearchContainer,{"data-testid":"search-bar",children:je(X0,{value:n,setValue:r})})]}),je(kn.CastContainer,{"data-testid":"result-list",children:je("ul",{children:e.length>0&&e.map((l,u)=>je("li",{children:l},`${u}-${l}`))})}),o&&je(K0,{})]})};function v1(){return je(Fp,{children:je(y1,{})})}zl.createRoot(document.getElementById("root")).render(je(Yr.StrictMode,{children:je(v1,{})}));

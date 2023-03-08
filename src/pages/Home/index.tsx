@@ -44,15 +44,15 @@ const Home = () => {
     <Styled.HomeContainer>
       <Styled.Stars/>
 
-      <Styled.Header>
+      <Styled.Header data-testid="header">
         <Styled.Logo/>
 
-        <Styled.SearchContainer>
+        <Styled.SearchContainer data-testid="search-bar">
           <Search value={searchValue} setValue={setSearchValue}/>
         </Styled.SearchContainer>
       </Styled.Header>
 
-      <Styled.CastContainer>
+      <Styled.CastContainer data-testid="result-list">
         <ul>
           {cast.length > 0 && cast.map((person, index) => (
             <li key={`${index}-${person}`}>{person}</li>
